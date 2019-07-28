@@ -7,3 +7,10 @@ before_install:
 
 script:
   - docker run -e CI=true mehdignu/docker-react npm run test -- --coverage
+
+deploy:
+  provider: heroku
+  on:
+    branch: master
+  api_key:
+    secure: $HEROKU_API_KEY
