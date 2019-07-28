@@ -11,6 +11,6 @@ script:
 deploy:
   provider: heroku
   on:
-    branch: master
+    all_branches: true
   api_key:
     secure: $HEROKU_API_KEY
